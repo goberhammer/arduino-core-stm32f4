@@ -160,9 +160,9 @@ void exti_detach_interrupt(afio_exti_num num) {
 
 //#if !defined(ENABLE_STAR_TS_IRQ)
 #ifndef ENABLE_STAR_TS_IRQ
-void __irq_exti0(void) {
-    dispatch_single_exti(AFIO_EXTI_0);
-}
+//void __irq_exti0(void) {
+//    dispatch_single_exti(AFIO_EXTI_0);
+//}
 #endif
 
 void __irq_exti1(void) {

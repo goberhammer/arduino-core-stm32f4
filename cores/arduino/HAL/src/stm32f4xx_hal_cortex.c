@@ -421,6 +421,16 @@ uint32_t HAL_NVIC_GetActive(IRQn_Type IRQn)
   return NVIC_GetActive(IRQn);
 }
 
+// XXX
+uint32_t HAL_NVIC_GetISER(IRQn_Type IRQn)
+{
+  return NVIC->ISER[(uint32_t)((int32_t)IRQn) >> 5];
+}
+uint32_t HAL_NVIC_GetICER(IRQn_Type IRQn)
+{
+  return NVIC->ICER[(uint32_t)((int32_t)IRQn) >> 5];
+}
+
 /**
   * @brief  Configures the SysTick clock source.
   * @param  CLKSource: specifies the SysTick clock source.

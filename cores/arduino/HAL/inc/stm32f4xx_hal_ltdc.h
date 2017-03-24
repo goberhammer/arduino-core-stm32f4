@@ -437,6 +437,8 @@ typedef struct
   * @retval None
   */
 #define __HAL_LTDC_ENABLE_IT(__HANDLE__, __INTERRUPT__) ((__HANDLE__)->Instance->IER |= (__INTERRUPT__))
+// XXX
+#define __HAL_LTDC_ENABLED_ITS(__HANDLE__) ((__HANDLE__)->Instance->IER)
 
 /**
   * @brief  Disables the specified LTDC interrupts.
